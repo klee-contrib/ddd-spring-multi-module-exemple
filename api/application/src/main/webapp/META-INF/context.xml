@@ -1,0 +1,15 @@
+<Context debug="0" reloadable="true" allowCasualMultipartParsing="true" resourceOnlyServlets="jsp">
+		<Resource
+				type="javax.sql.DataSource"
+				name="dbc/gciDatasource"
+				auth="SERVLET"
+				driverClassName="org.postgresql.Driver"
+				url="jdbc:postgresql://localhost:5432/jeyniapp"
+				username="jeyniapp"
+				password="CRLSty3F1HmneybbCdCz"
+				maxTotal="5"
+				maxIdle="5"
+				maxWaitMillis="10000"
+		/>
+</Context>
+

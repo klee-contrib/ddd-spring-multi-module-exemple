@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: "Thomas Cresson"
+      comment: "Create Registration Table"
+      changes:
+        - createTable:
+            tableName: REGISTRATION
+            columns:
+              - column:
+                  name: REG_ID
+                  type: SERIAL
+                  constraints:
+                    primary: true
+                    nullable: false
+                    autoIncrement: true
+              - column:
+                  name: EMAIL
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: PASSWORD
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: FIRST_NAME
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: NAME
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: PHONE_NUMBER
+                  type: VARCHAR(20)
