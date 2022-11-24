@@ -5,14 +5,20 @@ import fr.kleecontrib.domain.article.error.ArticleModificationStockError;
 
 public record Stock(long nombreRestant) {
 
-	private static final long CAPACITE_MAX = 10;
-
-	public static Stock hydrate(long nbRestant) {
-		return new Stock(nbRestant);
+	public Stock {
+		if (nombreRestant < 0) {
+			throw new ArticleModificationStockError();
+		}
 	}
 
+	public Stock() {
+		this(0);
+	}
+
+	private static final long CAPACITE_MAX = 10;
+
 	public static Stock vide() {
-		return new Stock(0);
+		return new Stock();
 	}
 
 	public Stock ajouter(long nombre) {
@@ -29,7 +35,4 @@ public record Stock(long nombreRestant) {
 		return this.nombreRestant == 0;
 	}
 
-	public long nombreRestant() {
-		return nombreRestant;
-	}
 }
