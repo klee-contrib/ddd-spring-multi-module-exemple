@@ -1,0 +1,25 @@
+version: '3.0'
+
+services:
+  klee-contrib:
+    image: postgres
+    environment:
+      - POSTGRES_DB=ddd_exemple
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=UdNmBJor45Ks4JKdCIfz
+    ports:
+      - "5455:5432"
+    volumes:
+      - app-volume:/var/lib/postgresql/data
+
+  klee-contrib-test:
+    image: postgres
+    environment:
+      - POSTGRES_DB=ddd_exemple_it
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=UdNmBJor45Ks4JKdCIfz
+    ports:
+      - "5456:5432"
+
+volumes:
+  app-volume:
