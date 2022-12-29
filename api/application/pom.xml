@@ -21,16 +21,6 @@
 			<artifactId>port</artifactId>
 			<version>${parent.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>fr.kleecontrib</groupId>
-			<artifactId>domain</artifactId>
-			<version>${parent.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>fr.kleecontrib</groupId>
-			<artifactId>usecase</artifactId>
-			<version>${parent.version}</version>
-		</dependency>
 		<!-- SPRING FRAMEWORK-->
 		<dependency>
 			<groupId>org.springframework</groupId>
